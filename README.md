@@ -29,7 +29,7 @@ def show_button_add(server, player):
     add.set_click_suggest(suggest)
     
     # 或者可以设置鼠标点击时自动执行命令 "!!task add foo"
-    # 注意两者是互斥的
+    # 注意 自动填充 和 自动执行 是互斥的
     command = "!!task add foo"
     add.set_click_command(command)
     
