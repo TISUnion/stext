@@ -5,6 +5,7 @@
 ### API 说明
 
 ```python
+# 为了避免 py2 麻烦的 unicode 问题，强烈建议 import 这个库
 from __future__ import unicode_literals
 
 import stext as st
@@ -26,6 +27,11 @@ def show_button_add(server, player):
     # 设置鼠标点击时自动在聊天框填充 "!!task add "
     suggest = "!!task add "
     add.set_click_suggest(suggest)
+    
+    # 或者可以设置鼠标点击时自动执行命令 "!!task add foo"
+    # 注意两者是互斥的
+    command = "!!task add foo"
+    add.set_click_command(command)
     
     # 将文字展示给玩家
     st.show_to_player(server, player, add)
