@@ -17,6 +17,10 @@ def show_button_add(server, player):
 
     # 设置文字为 "[+]"，颜色为红色
     add = st.SText("[+]", color=st.SColor.red)
+    
+    # 设置文字为 粗体 + 划掉
+    # styles 属性必须为 list
+    add.styles = [st.SStyle.bold, st.SStyle.strikethrough]
 	
     # 设置鼠标悬浮时显示"点击以快速添加子任务"
     # hover_text 也需要是 SText 类型（或 STextList，见后文)
