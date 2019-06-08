@@ -56,7 +56,7 @@ def show_random_text(server, player):
     msg2.append(m2, space, indent)  # append 方法支持同时添加多个 SText
     
     msg3 = st.STextList(newline)
-    msg4 = msg2.extend(msg3)  # 用 extend 方法连接两个 STextList
+    msg2.extend(msg3)  # 用 extend 方法连接两个 STextList
 
 ```
 
